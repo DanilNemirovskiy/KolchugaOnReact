@@ -1,0 +1,32 @@
+.logo {
+    width: 181px;
+    height: 115px;
+    margin-left: 75px;
+}
+.logo img {
+    width: 181px;
+    height: 115px;
+}
+.navigation {
+    margin-left: 250px;
+    width: 770px;
+    height: 40px;
+    float: left;
+    background: #FF5D09;
+    margin-top: -70px;
+}
+.navigation li {
+    float: left;
+}
+.navigation li a {
+    text-decoration: none;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+    color: white;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+.navigation li:first-child {
+    padding-left: 30px;
+}

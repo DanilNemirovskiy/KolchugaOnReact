@@ -1,0 +1,23 @@
+.info{
+    height: 310px;
+    width: 950px;
+    margin: 0 auto;
+    color: #717072;
+    background: #e0dfe2;
+}
+.info .first_par{
+    padding-top: 60px;
+    font-size: 18px;
+}
+.info .second_par{
+    margin-top: 30px;
+    font-size: 18px;
+}
+.info img{
+    padding-top: 100px;
+    width: 1100px;
+}
+.indicator {
+    width: 960px;
+    margin: 0 auto;
+}

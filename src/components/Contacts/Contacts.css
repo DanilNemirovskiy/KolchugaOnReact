@@ -1,0 +1,25 @@
+.contacts {
+    width: 570px;
+    height: 20px;
+    padding-top: 43px;
+    margin-left: 350px;
+    font-family: 'Open Sans', sans-serif;
+}
+.phone {
+    float: left;
+}
+.phone img{
+    margin-right: 15px;
+}
+.phone b{
+    color: #333333;
+}
+.email {
+    float: right;
+}
+.email a {
+    color: #999999;
+}
+.email img {
+    margin-right: 15px;
+}

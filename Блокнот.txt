@@ -1,0 +1,229 @@
+HTML
+
+
+
+class Why extends Component {
+    render(){
+        return(
+            <div className="why">
+                <div className="title">
+                    <h1>Почему необходимо установить защиту картера "Кольчуга"?</h1>
+                </div>
+                <div className="indicator">
+                    <hr/><hr className="hr2"/>
+                </div>
+                <div className="icons">
+                    <ul>
+                        <li>
+                            <a href="#" className="rollover1">
+                                <p>Защита от удара</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" className="rollover2">
+                                <p>Защита от пыли, влаги и грязи</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" className="rollover3">
+                                <p>Защита от перегрева</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" className="rollover4">
+                                <p>Надежность крепления</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" className="rollover5">
+                                <p>Аэродинамика</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" className="rollover6">
+                                <p>Повышенная прочность</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        );
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+CSS
+
+
+
+
+.why{
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 30px;
+    height: 275px;
+    background: #e0dfe2;
+}
+.title h1{
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: #666666;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.indicator {
+    width: 960px;
+    margin: 0 auto;
+}
+.indicator hr{
+    width: 480px;
+    height: 3px;
+    background-color: #00a479;
+    border: none;
+    margin-top: 30px;
+    float: left;
+}
+.indicator .hr2{
+    width: 480px;
+    height: 2px;
+    background-color: white;
+    border: none;
+    margin-top: 30px;
+    float: right;
+}
+.icons{
+    float: right;
+    width: 100%;
+    margin-top: 30px;
+}
+.icons ul li{
+    float: left;
+}
+.icons ul li a{
+    text-decoration: none;
+    display: block;
+    color: #666666;
+}
+.icons ul li a p{
+    padding-top: 90px;
+    width: 150px;
+}
+.icons .rollover6 p{
+    width: 170px;
+}
+a.rollover1 {
+    background: url(../../../src/images/icon1.png);
+    background-repeat: no-repeat;
+    background-position: 25px 5px;
+}
+a.rollover1:hover {
+    background: url(../../../src/images/icon11.png);
+    background-repeat: no-repeat;
+    color: #ff5d09;
+    background-position: 25px 5px;
+}
+a.rollover2 {
+    background: url(../../../src/images/icon2.png);
+    background-repeat: no-repeat;
+    background-position: 16px 0px;
+    margin-left: 10px;
+}
+a.rollover2:hover {
+    background: url(../../../src/images/icon22.png);
+    background-repeat: no-repeat;
+    color: #ff5d09;
+    background-position: 16px 0px;
+}
+a.rollover3 {
+    background: url(../../../src/images/icon3.png);
+    background-repeat: no-repeat;
+    background-position: center -7px;
+}
+
+a.rollover3:hover {
+    background: url(../../../src/images/icon33.png);
+    background-repeat: no-repeat;
+    color: #ff5d09;
+    background-position: center -7px
+}
+a.rollover4 {
+    background: url(../../../src/images/icon4.png);
+    background-repeat: no-repeat;
+    background-position: 10px 17px;
+    margin-left: 30px;
+}
+a.rollover4:hover {
+    background: url(../../../src/images/icon44.png);
+    background-repeat: no-repeat;
+    color: #ff5d09;
+    background-position: 10px 17px;
+    margin-left: 30px;
+}
+a.rollover5 {
+    background: url(../../../src/images/icon5.png);
+    background-repeat: no-repeat;
+    background-position: center 17px;
+}
+a.rollover5:hover {
+    background: url(../../../src/images/icon55.png);
+    background-repeat: no-repeat;
+    color: #ff5d09;
+    background-position: center 17px;
+}
+a.rollover6 {
+    background: url(../../../src/images/icon6.png);
+    background-repeat: no-repeat;
+    background-position: center 26px;
+}
+a.rollover6:hover {
+    background: url(../../../src/images/icon66.png);
+    background-repeat: no-repeat;
+    color: #ff5d09;
+    background-position: center 26px;
+}
+
+
+
+
+
+
+HTML через массив
+
+
+class Why extends Component {
+    render(){
+        return(
+            <div className="why">
+                <div className="title">
+                    <h1>Почему необходимо установить защиту картера "Кольчуга"?</h1>
+                </div>
+                <div className="indicator">
+                    <hr/><hr className="hr2"/>
+                </div>
+                <div className="icons">
+                    <ul>
+                        <li>
+                            {this.props.items.map((item, index) =>
+                                <li>
+                                    <a href={item.link} key={index}>
+                                        <img src={item.img}/>
+                                        <p>{item.p}</p>
+                                    </a>
+                                </li>
+                            )}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        );
+    }
+}
